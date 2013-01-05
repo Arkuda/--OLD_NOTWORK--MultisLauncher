@@ -1,4 +1,4 @@
 MultisLauncher
 ==============
 
-Minecraft launcher
+Minecraft launcher by Andrew and Nikita Djigurda12
