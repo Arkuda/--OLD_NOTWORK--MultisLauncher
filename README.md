@@ -1,4 +1,9 @@
 MultisLauncher
 ==============
 
-Minecraft launcher by Andrew and Nikita Djigurda12
+Minecraft launcher with mods-pack
+TO-DO:
+* standart working launcher
+* Design
+* *.minecraft.net servers check
+* ...
