@@ -1,4 +1,5 @@
-﻿using System;
+﻿using multisLauncher.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,13 @@ namespace multisLauncher
         public TESTFORM()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ioWorker iow = new ioWorker();
+            textBox2.Text = iow.getCrpHostLink("MagicWorld.zip");
+            
         }
     }
 }
