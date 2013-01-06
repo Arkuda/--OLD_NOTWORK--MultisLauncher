@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multisLauncher", "multisLau
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multisLib", "multisLib\multisLib.csproj", "{167F4644-08CC-4E4B-98BD-95679DDA2B72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultisLauncherTester", "MultisLauncherTester\MultisLauncherTester.csproj", "{F6D79AF0-8239-4AC9-ABE9-4FD063C60FF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{167F4644-08CC-4E4B-98BD-95679DDA2B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{167F4644-08CC-4E4B-98BD-95679DDA2B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{167F4644-08CC-4E4B-98BD-95679DDA2B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6D79AF0-8239-4AC9-ABE9-4FD063C60FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D79AF0-8239-4AC9-ABE9-4FD063C60FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D79AF0-8239-4AC9-ABE9-4FD063C60FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D79AF0-8239-4AC9-ABE9-4FD063C60FF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

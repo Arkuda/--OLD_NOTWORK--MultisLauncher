@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lib\ModPack.cs" />
+    <Compile Include="Lib\xmlParser.cs" />
     <Compile Include="LoginBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +92,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\multisLib\multisLib.csproj">
-      <Project>{167f4644-08cc-4e4b-98bd-95679dda2b72}</Project>
-      <Name>multisLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

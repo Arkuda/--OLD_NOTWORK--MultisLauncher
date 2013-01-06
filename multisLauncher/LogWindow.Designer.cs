@@ -1,4 +1,5 @@
-﻿namespace multisLauncher
+﻿using System;
+namespace multisLauncher
 {
     partial class LogWindow
     {
@@ -76,5 +77,6 @@
         {
             LogBox.Items.Add("["+index+"]:"+customText);
         }
+
     }
 }
