@@ -36,9 +36,10 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.LauncherTabs = new System.Windows.Forms.TabControl();
             this.MPTab = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.NewsTab = new System.Windows.Forms.TabPage();
             this.MediaTab = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.LauncherTabs.SuspendLayout();
             this.MPTab.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -116,6 +117,15 @@
             this.MPTab.Text = "ModPacks";
             this.MPTab.UseVisualStyleBackColor = true;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Size = new System.Drawing.Size(785, 469);
+            this.splitContainer1.SplitterDistance = 261;
+            this.splitContainer1.TabIndex = 0;
+            // 
             // NewsTab
             // 
             this.NewsTab.Location = new System.Drawing.Point(4, 22);
@@ -135,27 +145,32 @@
             this.MediaTab.Text = "Media";
             this.MediaTab.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
+            // button1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Size = new System.Drawing.Size(785, 469);
-            this.splitContainer1.SplitterDistance = 261;
-            this.splitContainer1.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(765, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MultisLauncherMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 531);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LauncherTabs);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.AboutButton);
             this.Controls.Add(this.LSButton);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.PlayButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MultisLauncherMain";
             this.Text = "MultisLauncher";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -178,6 +193,7 @@
         private System.Windows.Forms.TabPage NewsTab;
         private System.Windows.Forms.TabPage MediaTab;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button button1;
 
     }
 }
