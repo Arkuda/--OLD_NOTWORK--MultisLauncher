@@ -64,19 +64,59 @@ namespace multisLib
 
         public bool isUptodate(String verFile)
         {
+            int icurrVer, iverFile;
+
+            
+
+
             if (File.Exists(verFile))
             {
-                File.ReadAllLines(verFile);
-                return false; // because i need vodcaaaaaaaaaaaaaaaaaaaa
+                try
+                {
+                    icurrVer = int.Parse(version);
+                    iverFile = int.Parse(File.ReadAllText(verFile));
+                }
+                catch (IOException ioex)
+                {
+                    //showErooor
+                    return false; 
+                }
+
+                if (icurrVer <= iverFile)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
             }
             else
             {
                 return false;
             }
-            return false;
+            
         }
 
+        public bool downloadModPack(string prefAddr)
+        {
+            WebClient wc = new WebClient();
+
+            try
+            {
+               wc.DownloadFile(prefAddr, url);
+            }
+            catch (WebException wexc)
+            {
+                return false;
+                //error message
+            }
 
 
+
+            return true;
+        }
+        
     }
 }

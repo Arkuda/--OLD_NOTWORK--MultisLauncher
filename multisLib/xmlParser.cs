@@ -45,7 +45,7 @@ namespace multisLib
             }
             catch (NullReferenceException ex)
             {
-                
+                //MessageBox.Show(ex.Message);
             }
             
             return mp;
