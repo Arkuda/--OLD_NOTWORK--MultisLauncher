@@ -11,7 +11,7 @@ TO-DO:
 
 TO-DO-LIB:
 * create update cheker
-* back capabbility to FTB Launcher
-* right xml parsing
+* +done back capabbility to FTB Launcher
+* +done right xml parsing 
 * minecraft launching
-* right download files
+* right download files 

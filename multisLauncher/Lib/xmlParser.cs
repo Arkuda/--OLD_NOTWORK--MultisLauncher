@@ -1,4 +1,5 @@
-﻿using System;
+﻿using multisLauncher;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,43 @@ using System.Xml;
 
 namespace multisLib
 {
+
     class xmlParser
     {
 
-        public ModPack parseModpack(string xml)
+
+
+
+
+
+
+
+
+
+
+
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //! IT"S OLD FILE TO PARSE FTB XML - IT"S NOT WORKING KOMING SOOON !
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private ModPack mp;
+
+        public ModPack parseModpack(string xml, LogWindow console, int i)
         {
 
             XmlDocument doc = new XmlDocument();
@@ -20,43 +54,47 @@ namespace multisLib
             //String image, String dir, String mcVersion, String serverUrl, String info, String mods,
             //String oldVersions, String xml)
 
-            ModPack mp = null;
-            try
-            {
+            
+           // try
+           // {
+
+            
+
+             
                 bool isFTBModPack = true;
 
-                if(doc.GetElementById("isFTB") == null)
-                {
-                    isFTBModPack = false;
-                }
+                XmlNode xl =  doc.GetElementsByTagName("modpack")[i];
 
-                mp = new ModPack(
-                doc.GetElementsByTagName("name").ToString(),
-                doc.GetElementsByTagName("author").ToString(),
-                doc.GetElementsByTagName("version").ToString(),
-                doc.GetElementsByTagName("logo").ToString(),
-                doc.GetElementsByTagName("url").ToString(),
-                doc.GetElementsByTagName("image").ToString(),
-                doc.GetElementsByTagName("dir").ToString(),
-                doc.GetElementsByTagName("version").ToString(),
-                doc.GetElementsByTagName("serverurl").ToString(),
-                doc.GetElementsByTagName("info").ToString(),
-                doc.GetElementsByTagName("mods").ToString(),
-                doc.GetElementsByTagName("oldVersions").ToString(),
+                ModPack modPack = new ModPack(
+                xl.Attributes["name"].Value.ToString(),
+                xl.Attributes["author"].Value.ToString(),
+                xl.Attributes["version"].Value.ToString(),
+                xl.Attributes["logo"].Value.ToString(),
+                xl.Attributes["url"].Value.ToString(),
+                xl.Attributes["image"].Value.ToString(),
+                xl.Attributes["dir"].Value.ToString(),
+                xl.Attributes["mcVersion"].Value.ToString(),
+                xl.Attributes["serverPack"].Value.ToString(),
+                xl.Attributes["description"].Value.ToString(),
+                xl.Attributes["mods"].Value.ToString(),
+                xl.Attributes["oldVersions"].Value.ToString(),
                 xml,
                 isFTBModPack);
-            }
-            catch (NullReferenceException ex)
-            {
-                //MessageBox.Show(ex.Message);
+ 
+
+             return modPack;
+           }
+         /*  catch (NullReferenceException ex)
+           {
+                console.printErr(ex.Message);
                 Console.WriteLine(ex.Message);
-
-            }
-            return mp;
-
+                return null;
+           }
+        
+            */
 
         }
 
 
     }
-}
+

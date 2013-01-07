@@ -10,11 +10,11 @@ namespace multisLib
 {
     class ModPack
     {
-        private string name, author, version, url, dir, mcVersion, serverUrl, logoName, imageName, info, animation, xml;
-        private string[] mods, oldVersions;
-        private string image, logo;
-        private List<ModPack> packs = new List<ModPack>();
-        private bool isFTBMP; 
+        public string name, author, version, url, dir, mcVersion, serverUrl, logoName, imageName, info, animation, xml;
+        public string[] mods, oldVersions;
+        public string image, logo;
+        public List<ModPack> packs = new List<ModPack>();
+        public bool isFTBMP; 
 
 
 
@@ -54,7 +54,7 @@ namespace multisLib
 
             if (oldVersions.Length == 0)
             {
-                this.oldVersions = null;
+                this.oldVersions = new string[]{"0"};
             }
             else
             {

@@ -1,4 +1,5 @@
 ﻿using multisLauncher.Lib;
+using multisLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +20,12 @@ namespace multisLauncher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ioWorker iow = new ioWorker();
-            textBox2.Text = iow.getCrpHostLink("MagicWorld.zip");
+            LogWindow consl = new LogWindow();
+            consl.Show();
+
+            consl.printMsg("Hello - it's a message");
             
+
         }
     }
 }
