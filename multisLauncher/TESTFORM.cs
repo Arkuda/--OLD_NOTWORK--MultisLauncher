@@ -15,16 +15,22 @@ namespace multisLauncher
     {
         public TESTFORM()
         {
+
+            
             InitializeComponent();
+
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LogWindow consl = new LogWindow();
-            consl.Show();
-
-            consl.printMsg("Hello - it's a message");
+           
             
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
 
         }
     }
