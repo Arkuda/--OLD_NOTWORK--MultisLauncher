@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
+using System.Net.NetworkInformation;
 
 
 namespace multisLauncher
@@ -25,7 +26,29 @@ namespace multisLauncher
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder();
+
+            Ping p = new Ping();
+            PingReply pr = p.Send("login.minecraft.net");
+
+            if (pr.Status == IPStatus.Success)
+            {
+                MessageBox.Show("all right");
+            }
+            else if (pr.Status == IPStatus.TimedOut)
+            {
+                MessageBox.Show("timeout");
+            }
+            else
+            {
+                MessageBox.Show("You don't have acces to login servers, try later");
+            }
+            
+            //wc.DownloadData("http://login.minecraft.net/");
+           
+            
+
+
+          /*  StringBuilder sb = new StringBuilder();
 
             byte[] buf = new byte[8192];
 
@@ -54,6 +77,12 @@ namespace multisLauncher
             } while (count > 0);
 
             Console.WriteLine(sb.ToString());
+           * 
+           */
         }
+
+        
+
+       
     }
 }
