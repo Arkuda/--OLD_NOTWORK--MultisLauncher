@@ -97,11 +97,11 @@
             this.ExitLoginFormButton.UseVisualStyleBackColor = true;
             this.ExitLoginFormButton.Click += new System.EventHandler(this.ExitLoginFormButton_Click);
             // 
-            // Form1
+            // LoginBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 94);
+            this.ClientSize = new System.Drawing.Size(392, 163);
             this.Controls.Add(this.ExitLoginFormButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.OfflineButton);
@@ -109,7 +109,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "LoginBox";
             this.Text = "Вход";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
